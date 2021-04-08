@@ -10,11 +10,18 @@
 <body>
     <div id="root">
         
-        <div class="block-mails"> 
-            <span v-for="mail in email">{{ mail }}</span>
+        <div class="container">
+            <div class="block-mails"> 
+                <span v-for="mail in email">{{ mail }}</span>
+            </div>
+    
+            <div class="block-mails" > 
+                <span v-if="(emailTwo.length == 10)"  v-for="mailTwo in emailTwo">{{ mailTwo }}</span>
+            </div>
         </div>
 
         <button @click='mailGen'> Generate</button>
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
